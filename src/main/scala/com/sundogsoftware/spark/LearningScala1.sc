@@ -48,3 +48,10 @@
    // Write some code that takes the value of pi, doubles it, and then prints it within a string with
    // three decimal places of precision to the right.
    println(f"Pi is about ${pi * 2}%.3f")
+
+   //How to filter only number from a string
+   val quote: String = "Some people in instagram have 1000000 of followers."
+   //Keep a eye on Regex expression, we can't even miss a space in it
+   val pattern1 = """.* ([\d]+).*""".r
+   val pattern1(intResult) = quote
+   println(intResult.toInt)
